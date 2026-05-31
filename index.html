@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Наши услуги — Укладка напольных покрытий</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<section class="services-section">
+  <h2>Наши услуги</h2>
+
+  <div class="services-card">
+    <div class="services-image">
+      <img src="foto.jfif"  />
+      <div class="services-image-label">Укладка напольных<br>покрытий</div>
+    </div>
+
+    <div class="services-list">
+      
+      <div id="dynamic-services"></div>
+
+      <div class="service-row additional">
+        <span class="service-name">
+          Дополнительные работы: вырез под трубы, установка порогов, подпил дверного полотна и т.д.
+        </span>
+        <span class="service-price">Обговаривается отдельно</span>
+      </div>
+      <p class="services-footnote">
+        * Минимальный заказ 8 000 ₽. Выезд консультации на объект по договорённости.
+      </p>
+      <p class="services-specialist">
+        Специалист по укладке пола: +7 (925) 514 52 68 Олег Дмитриевич
+      </p>
+    </div>
+
+    <div class="services-badge">
+      <span class="badge-text">Скидка на работу при покупке в нашем магазине</span>
+      <span class="badge-percent">10 %</span>
+    </div>
+  </div>
+
+  <div class="admin-panel">
+    <h3>Добавить услугу (Локально)</h3>
+    <form id="addServiceForm">
+      <input type="text" id="serviceNameInput" placeholder="Название услуги (например, Укладка ламината)" required />
+      <input type="text" id="servicePriceInput" placeholder="Цена (например, 300 ₽/м²)" required />
+      <button type="submit">Добавить в прайс</button>
+      <button type="button" id="clearStorageBtn" class="danger-btn">Сбросить список</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>

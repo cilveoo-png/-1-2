@@ -1,0 +1,200 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+.services-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.services-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: #111;
+}
+
+.services-card {
+  display: grid;
+  grid-template-columns: 260px 1fr auto;
+  gap: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  min-height: 220px;
+}
+
+.services-image {
+  position: relative;
+  background: #4a5240;
+  overflow: hidden;
+}
+
+.services-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.85;
+}
+
+.services-image-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(50, 55, 40, 0.82);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 14px 16px;
+  line-height: 1.35;
+}
+
+.services-list {
+  padding: 24px 28px;
+  border-left: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+.service-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.service-name {
+  font-size: 13.5px;
+  color: #333;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.service-price {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #222;
+  white-space: nowrap;
+}
+
+.service-row.additional {
+  align-items: flex-start;
+  padding: 12px 0 4px;
+  border-bottom: none;
+}
+
+.service-row.additional .service-name { font-size: 13px; color: #444; }
+.service-row.additional .service-price { font-size: 13px; font-weight: 400; color: #555; }
+
+.services-footnote { font-size: 11.5px; color: #888; margin-top: 8px; line-height: 1.5; }
+.services-specialist { font-size: 13px; font-weight: 500; color: #222; margin-top: 10px; }
+
+.services-badge {
+  width: 130px;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #b8d44a;
+  border-radius: 50%;
+  margin: auto 24px;
+  text-align: center;
+  padding: 20px 12px;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.badge-text { font-size: 12px; font-weight: 500; color: #222; line-height: 1.35; margin-bottom: 4px; }
+.badge-percent { font-size: 32px; font-weight: 700; color: #111; line-height: 1; }
+
+
+.admin-panel {
+  margin-top: 40px;
+  padding: 24px;
+  background: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+}
+
+.admin-panel h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.admin-panel form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.admin-panel input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  flex: 1;
+  min-width: 200px;
+}
+
+.admin-panel button {
+  padding: 10px 20px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.admin-panel button:hover { background: #444; }
+
+.admin-panel .danger-btn { background: #d9534f; }
+.admin-panel .danger-btn:hover { background: #c9302c; }
+
+
+@media (max-width: 900px) {
+  .services-card {
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto auto;
+  }
+  .services-badge {
+    grid-column: 1 / -1;
+    border-radius: 0;
+    width: 100%;
+    aspect-ratio: unset;
+    min-height: 80px;
+    flex-direction: row;
+    gap: 12px;
+    margin: 0;
+    padding: 16px 24px;
+  }
+  .badge-percent { font-size: 26px; }
+}
+
+@media (max-width: 600px) {
+  .services-section h2 { font-size: 22px; }
+  .services-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px auto auto;
+  }
+  .services-image { height: 180px; }
+  .services-list { border-left: none; border-top: 1px solid #e0e0e0; padding: 16px; }
+  .services-badge { flex-direction: row; gap: 12px; margin: 0; padding: 14px 16px; }
+  .admin-panel form { flex-direction: column; }
+}
