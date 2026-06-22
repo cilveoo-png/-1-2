@@ -7,14 +7,14 @@ const defaultServices = [
   { name: "Укладка ёлкой", price: "1 000 ₽/м²" }
 ];
 
-// Получаем элементы DOM
+
 const servicesContainer = document.getElementById('dynamic-services');
 const form = document.getElementById('addServiceForm');
 const nameInput = document.getElementById('serviceNameInput');
 const priceInput = document.getElementById('servicePriceInput');
 const clearBtn = document.getElementById('clearStorageBtn');
 
-// Инициализация данных
+
 function getServices() {
   const stored = localStorage.getItem('floorServices');
   if (stored) {
@@ -26,7 +26,7 @@ function getServices() {
   }
 }
 
-// Отрисовка списка на странице
+
 function renderServices() {
   const services = getServices();
   servicesContainer.innerHTML = ''; 
@@ -64,11 +64,11 @@ form.addEventListener('submit', function(e) {
   form.reset();
 });
 
-// Кнопка сброса 
+
 clearBtn.addEventListener('click', function() {
   localStorage.removeItem('floorServices');
   renderServices();
 });
 
-// Первичная отрисовка при загрузке
+
 renderServices();
